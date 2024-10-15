@@ -7,7 +7,7 @@ const cors = require("cors");
 
 app.use(cors({
   origin: ['http://localhost:3000',],
-  // origin: ['https://lashop10.vercel.app',],
+  // origin: ['https://bmarkecommercebackend.vercel.app/',],shop
   credentials: true
 }));
 

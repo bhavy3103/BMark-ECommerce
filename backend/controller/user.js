@@ -36,7 +36,7 @@ router.post("/create-user", async (req, res, next) => {
     const password1 = password;
     const activationToken = createActivationToken(user);
 
-    // const activationUrl = `https://lashop10.vercel.app/activation/${activationToken}`;
+    // const activationUrl = `https://bmarkecommercebackend.vercel.app//activation/${activationToken}`;
     const activationUrl = `http://localhost:3000/activation/${activationToken}`;
 
     try {
