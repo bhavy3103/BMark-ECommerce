@@ -18,10 +18,10 @@ BMark-Ecommerce is a dynamic e-commerce platform designed to allow users to crea
 ## 🚀 Getting Started
 
 ### 1. Clone Repo.
-### 2. `cd client --> npm i --> npm start`
-### 3. `cd server --> npm i --> npm start`
+### 2. `cd frontend --> npm i --> npm start`
+### 3. `cd backend --> npm i --> npm start`
 ### 4. `cd socket --> npm i --> npm start`
-### 5. Setup .env file in backend/config folder according to provided .env.example
+### 5. Setup .env file in the backend/config folder according to the provided .env.example
 
    ## 🛠️ Looking for Contributions
 
@@ -64,7 +64,7 @@ To contribute:
    
  
 
-  ## 🔧 What We Really Need
+  ## 🔧 What We Need
 
 - **Payment Security**: 
   - Review and enhance the Stripe payment integration for better security.
