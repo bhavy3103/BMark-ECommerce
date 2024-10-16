@@ -7,8 +7,10 @@ const cors = require("cors");
 
 app.use(cors({
   // origin: ['http://localhost:3000',],
-  origin: ['https://bmarkecommerce.vercel.app/',],
-  credentials: true
+  origin: ['https://bmarkecommerce.vercel.app'],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json());
