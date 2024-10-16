@@ -22,6 +22,8 @@ BMark-Ecommerce is a dynamic e-commerce platform designed to allow users to crea
 ### 3. `cd backend --> npm i --> npm start`
 ### 4. `cd socket --> npm i --> npm start`
 ### 5. Setup .env file in the backend/config folder according to the provided .env.example
+### 6. Setup .env file in the socket folder according to the provided .env.example
+
 
    ## 🛠️ Looking for Contributions
 
