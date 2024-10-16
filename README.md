@@ -1,6 +1,6 @@
-# BMark-Ecommerce
+# BMark-E-commerce
 
-BMark-Ecommerce is a dynamic e-commerce platform designed to provide users with the ability to create accounts as buyers or sellers. The platform facilitates seamless transactions for purchasing and selling items, and features an integrated chat system to ensure smooth communication between buyers and sellers.
+BMark-Ecommerce is a dynamic e-commerce platform designed to allow users to create accounts as buyers or sellers. The platform facilitates seamless transactions for purchasing and selling items and features an integrated chat system to ensure smooth communication between buyers and sellers.
 
 ## ✨ Features
 
@@ -17,21 +17,11 @@ BMark-Ecommerce is a dynamic e-commerce platform designed to provide users with 
 
 ## 🚀 Getting Started
 
-1. **Clone the repository**:  
-   ```bash
-   git clone https://github.com/Amansingh0807/BMark-Ecommerce.git
-2. Install dependencies:
-Navigate to both the frontend and backend directories and run:
-   ```
-   npm install
-   ```
-3. Environment Variables:
-Configure the required environment variables for MongoDB, Stripe, and other services.
-4. Start the application:
-To run the frontend and backend, use the following commands in their respective directories:
-   ```
-   npm start
-   ```
+### 1. Clone Repo.
+### 2. `cd client --> npm i --> npm start`
+### 3. `cd server --> npm i --> npm start`
+### 4. `cd socket --> npm i --> npm start`
+### 5. Setup .env file in backend/config folder according to provided .env.example
 
    ## 🛠️ Looking for Contributions
 
@@ -51,12 +41,12 @@ We welcome contributions to improve and enhance the platform! Here’s how you c
   - Have ideas for new features? We'd love to hear them!
 
 - **Bug Fixes**: 
-  - Found a bug? Your contributions to fix them are much appreciated!
+  - Found a bug? Your contributions to fixing them are much appreciated!
 
 
 ## 🤝 Contribution
 
-We welcome contributions from developers of all skill levels! Whether you're fixing a bug, adding new features, or improving documentation, your help is appreciated. 
+We welcome contributions from developers of all skill levels! I would appreciate your help if you could fix a bug, add new features, or improve documentation. 
 
 To contribute:
 
