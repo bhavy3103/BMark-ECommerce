@@ -41,8 +41,8 @@ router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
 
     const password = seller.password;
 
-    // const activationUrl = `https://bmarkecommercebackend.vercel.app//seller/activation/${activationToken}`;
-    const activationUrl = `http://localhost:3000/seller/activation/${activationToken}`;
+    const activationUrl = `https://bmarkecommerce.vercel.app/seller/activation/${activationToken}`;
+    // const activationUrl = `http://localhost:3000/seller/activation/${activationToken}`;
 
     try {
       await sendMail({

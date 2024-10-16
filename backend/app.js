@@ -6,8 +6,8 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['http://localhost:3000',],
-  // origin: ['https://bmarkecommercebackend.vercel.app/',],shop
+  // origin: ['http://localhost:3000',],
+  origin: ['https://bmarkecommerce.vercel.app/',],
   credentials: true
 }));
 
