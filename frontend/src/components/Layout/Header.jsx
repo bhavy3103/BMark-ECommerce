@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import styles from "../../styles/styles";
 import { categoriesData, productData } from "../../static/data";
@@ -18,7 +18,7 @@ import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -49,14 +49,12 @@ const Header = ({ activeHeading }) => {
   const { id } = useParams();
 
   const refresh = () => {
-    navigate(`/product/${id}`)
+    navigate(`/product/${id}`);
     setTimeout(() => {
       window.location.reload();
     }, 500);
-  }
-  useEffect(() => {
-  }, [id]);
-
+  };
+  useEffect(() => {}, [id]);
 
   // console.log(id)
 
@@ -98,7 +96,6 @@ const Header = ({ activeHeading }) => {
                 {searchData &&
                   searchData.map((i, index) => {
                     return (
-
                       <Link to={`/product/${i._id}`}>
                         <div className="w-full flex items-start-py-3 mb-2">
                           <img
@@ -127,24 +124,28 @@ const Header = ({ activeHeading }) => {
         </div>
       </div>
       <div
-        className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-          } transition hidden 800px:flex items-center justify-between w-full bg-[#3321c8] h-[70px]`}
+        className={`${
+          active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
+        } transition hidden 800px:flex items-center justify-between w-full bg-[#3321c8] h-[70px]`}
       >
         <div
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
         >
           {/* categories */}
           <div onClick={() => setDropDown(!dropDown)}>
-            <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
-              <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
+            <div className="relative h-[60px] w-[270px] hidden 1000px:block">
+              <BiMenuAltLeft
+                size={30}
+                className="absolute top-1/2 left-2 transform -translate-y-1/2"
+              />
               <button
-                className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-t-md`}
+                className={`h-[100%] w-full flex justify-between items-center pl-10 bg-white font-sans text-lg font-[500] select-none rounded-md`}
               >
                 All Categories
               </button>
               <IoIosArrowDown
                 size={20}
-                className="absolute right-2 top-4 cursor-pointer"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer"
                 onClick={() => setDropDown(!dropDown)}
               />
               {dropDown ? (
@@ -219,8 +220,9 @@ const Header = ({ activeHeading }) => {
 
       {/* mobile header */}
       <div
-        className={`${active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
-          }
+        className={`${
+          active === true ? "shadow-sm fixed top-0 left-0 z-10" : null
+        }
       w-full h-[60px] bg-[#fff] z-50 top-0 left-0 shadow-sm 800px:hidden`}
       >
         <div className="w-full flex items-center justify-between">
