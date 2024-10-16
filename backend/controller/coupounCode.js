@@ -12,7 +12,7 @@ router.post(
   isSeller,
   catchAsyncErrors(async (req, res, next) => {
     try {
-      const isCoupounCodeExists = await CoupounCode.find({
+      const isCoupounCodeExists = await CoupounCode.findOne({
         name: req.body.name,
       });
 
