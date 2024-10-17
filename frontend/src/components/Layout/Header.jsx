@@ -147,12 +147,11 @@ const Header = ({ activeHeading }) => {
                 className="absolute right-2 top-4 cursor-pointer"
                 onClick={() => setDropDown(!dropDown)}
               />
-              {dropDown ? (
                 <DropDown
+                  showDropDown={dropDown}
                   categoriesData={categoriesData}
                   setDropDown={setDropDown}
                 />
-              ) : null}
             </div>
           </div>
           {/* navitems */}
@@ -207,12 +206,12 @@ const Header = ({ activeHeading }) => {
             </div>
 
             {/* cart popup */}
-            {openCart ? <Cart setOpenCart={setOpenCart} /> : null}
+            <Cart showCart={openCart} setOpenCart={setOpenCart} /> 
 
             {/* wishlist popup */}
-            {openWishlist ? (
-              <Wishlist setOpenWishlist={setOpenWishlist} />
-            ) : null}
+
+            <Wishlist showWishlist={openWishlist} setOpenWishlist={setOpenWishlist} />
+
           </div>
         </div>
       </div>

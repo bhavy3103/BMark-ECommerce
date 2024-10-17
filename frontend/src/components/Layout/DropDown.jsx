@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../../styles/styles";
 
-const DropDown = ({ categoriesData, setDropDown }) => {
+const DropDown = ({ categoriesData, setDropDown, showDropDown }) => {
   const navigate = useNavigate();
   const submitHandle = (i) => {
     navigate(`/products?category=${i.title}`);
@@ -10,12 +10,12 @@ const DropDown = ({ categoriesData, setDropDown }) => {
     window.location.reload();
   };
   return (
-    <div className="pb-4 w-[270px] bg-[#fff] absolute z-30 rounded-b-md shadow-sm">
+    <div className={`${showDropDown?"animate-show_dd": "animate-hide_dd pointer-events-none"} pb-4 w-[270px] bg-[#fff] absolute z-30 rounded-b-md shadow-sm`} >
       {categoriesData &&
         categoriesData.map((i, index) => (
           <div
             key={index}
-            className={`${styles.noramlFlex}`}
+            className={`${styles.noramlFlex} hover:cursor-pointer hover:bg-blue-500 hover:text-white transition`}
             onClick={() => submitHandle(i)}
           >
             <img
