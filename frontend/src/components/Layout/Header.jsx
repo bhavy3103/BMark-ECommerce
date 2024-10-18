@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from 'react-router-dom';
 
 import styles from "../../styles/styles";
@@ -33,6 +33,7 @@ const Header = ({ activeHeading }) => {
   const [openCart, setOpenCart] = useState(false);
   const [openWishlist, setOpenWishlist] = useState(false);
   const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const navigate = useNavigate();
   const handleSearchChange = (e) => {
     const term = e.target.value;
@@ -134,7 +135,7 @@ const Header = ({ activeHeading }) => {
           className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
         >
           {/* categories */}
-          <div onClick={() => setDropDown(!dropDown)}>
+          <div ref={dropdownRef} onClick={() => setDropDown(!dropDown)}>
             <div className="relative h-[60px] mt-[10px] w-[270px] hidden 1000px:block">
               <BiMenuAltLeft size={30} className="absolute top-3 left-2" />
               <button
@@ -151,6 +152,7 @@ const Header = ({ activeHeading }) => {
                   showDropDown={dropDown}
                   categoriesData={categoriesData}
                   setDropDown={setDropDown}
+                  _ref={dropdownRef}
                 />
             </div>
           </div>
