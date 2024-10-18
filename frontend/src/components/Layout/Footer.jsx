@@ -45,20 +45,19 @@ const Footer = () => {
           <br />
           <p>The home and elements needeed to create beatiful products.</p>
           <div className="flex items-center mt-[15px]">
-            <AiFillFacebook size={25} className="cursor-pointer" />
-            <AiOutlineTwitter
-              size={25}
-              style={{ marginLeft: "15px", cursor: "pointer" }}
-            />
-            <AiFillInstagram
-              size={25}
-              style={{ marginLeft: "15px", cursor: "pointer" }}
-            />
-            <AiFillYoutube
-              size={25}
-              style={{ marginLeft: "15px", cursor: "pointer" }}
-            />
-          </div>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+    <AiFillFacebook size={25} className="cursor-pointer" />
+  </a>
+  <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "15px" }}>
+    <AiOutlineTwitter size={25} className="cursor-pointer" />
+  </a>
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "15px" }}>
+    <AiFillInstagram size={25} className="cursor-pointer" />
+  </a>
+  <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "15px" }}>
+    <AiFillYoutube size={25} className="cursor-pointer" />
+  </a>
+</div>
         </ul>
 
         <ul className="text-center sm:text-start">
