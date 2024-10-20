@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromWishlist } from "../../redux/actions/wishlist";
 import { addTocart } from "../../redux/actions/cart";
 
-const Wishlist = ({ setOpenWishlist }) => {
+const Wishlist = ({ setOpenWishlist, showWishlist }) => {
   const { wishlist } = useSelector((state) => state.wishlist);
   const dispatch = useDispatch();
 
@@ -22,11 +22,11 @@ const Wishlist = ({ setOpenWishlist }) => {
   }
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10">
-      <div className="fixed top-0 right-0 h-full w-[80%] overflow-y-scroll 800px:w-[25%] bg-white flex flex-col justify-between shadow-sm">
+    <div className={`${showWishlist?"":"bg-transparent pointer-events-none"} fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10`}>
+      <div className={`${ showWishlist ? "animate-show_sidebar" : "animate-hide_sidebar" } fixed top-0 right-0 h-full w-[80%] overflow-y-scroll 800px:w-[25%] bg-white flex flex-col justify-between shadow-sm`}>
         {wishlist && wishlist.length === 0 ? (
-          <div className="w-full h-screen flex items-center justify-center">
-            <div className="flex w-full justify-end pr-5 fixed top-3 right-3">
+          <div className={`w-full h-screen flex items-center justify-center`}>
+            <div className="flex w-full justify-end pt-5 pr-5 fixed top-3 right-3">
               <RxCross1
                 size={25}
                 className="cursor-pointer"

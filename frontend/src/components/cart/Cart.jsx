@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTocart, removeFromCart } from "../../redux/actions/cart";
 import { toast } from "react-toastify";
 
-const Cart = ({ setOpenCart }) => {
+const Cart = ({ setOpenCart, showCart }) => {
   const { cart } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -26,8 +26,8 @@ const Cart = ({ setOpenCart }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10">
-      <div className="fixed top-0 right-0 h-full w-[80%] 800px:w-[25%] bg-white flex flex-col overflow-y-scroll justify-between shadow-sm">
+    <div className={`${showCart?"":"bg-transparent pointer-events-none"} fixed top-0 left-0 w-full bg-[#0000004b] h-screen z-10`}>
+      <div className={`${showCart?"animate-show_sidebar":"animate-hide_sidebar"} fixed top-0 right-0 h-full w-[80%] 800px:w-[25%] bg-white flex flex-col overflow-y-scroll justify-between shadow-sm`}>
         {cart && cart.length === 0 ? (
           <div className="w-full h-screen flex items-center justify-center">
             <div className="flex w-full justify-end pr-5 fixed top-3 right-3">
