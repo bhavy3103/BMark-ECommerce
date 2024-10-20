@@ -38,7 +38,7 @@ const Wishlist = ({ setOpenWishlist, showWishlist }) => {
         ) : (
           <>
             <div>
-              <div className="flex w-full justify-end pt-5 pr-5">
+              <div className="flex w-full justify-end pr-5">
                 <RxCross1
                   size={25}
                   className="cursor-pointer"
