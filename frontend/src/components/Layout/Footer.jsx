@@ -43,7 +43,7 @@ const Footer = () => {
             style={{ filter: "brightness(0) invert(1)" }}
           />
           <br />
-          <p>The home and elements needeed to create beatiful products.</p>
+          <p>The home and elements needed to create beautiful products.</p>
           <div className="flex items-center mt-[15px]">
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
     <AiFillFacebook size={25} className="cursor-pointer" />
@@ -110,7 +110,7 @@ const Footer = () => {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
          text-center pt-2 text-gray-400 text-sm pb-8"
       >
-        <span>© 2023 LA. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} LA. All rights reserved.</span>
         <span>Terms · Privacy Policy</span>
         <div className="sm:block flex items-center justify-center w-full">
           <img
