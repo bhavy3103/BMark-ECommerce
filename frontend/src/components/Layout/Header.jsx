@@ -19,6 +19,7 @@ import Cart from "../cart/Cart";
 import Wishlist from "../Wishlist/Wishlist";
 import { RxCross1 } from "react-icons/rx";
 import { useParams } from 'react-router-dom';
+import { Toggle } from "../Toggle";
 
 const Header = ({ activeHeading }) => {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -124,6 +125,9 @@ const Header = ({ activeHeading }) => {
                 <IoIosArrowForward className="ml-1" />
               </h1>
             </Link>
+          </div>
+          <div>
+            <Toggle />
           </div>
         </div>
       </div>
