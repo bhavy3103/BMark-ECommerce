@@ -12,6 +12,8 @@ import {
   footerSupportLinks,
 } from "../../static/data";
 
+// Dynamic copyright year based on current year
+const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
@@ -110,7 +112,7 @@ const Footer = () => {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
          text-center pt-2 text-gray-400 text-sm pb-8"
       >
-        <span>© {new Date().getFullYear()} LA. All rights reserved.</span>
+        <span>© {currentYear} LA. All rights reserved.</span>
         <span>Terms · Privacy Policy</span>
         <div className="sm:block flex items-center justify-center w-full">
           <img
@@ -123,4 +125,5 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+// Memoize the component to prevent unnecessary re-renders
+export default memo(Footer);
