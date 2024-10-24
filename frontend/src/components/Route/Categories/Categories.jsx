@@ -8,6 +8,7 @@ const Categories = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
       <div className={`${styles.section} hidden sm:block`}>
@@ -46,7 +47,7 @@ const Categories = () => {
                   <h5 className={`text-[18px] leading-[1.3]`}>{i.title}</h5>
                   <img
                     src={i.image_Url}
-                    className="w-[120px] object-cover"
+                    className="category-image w-[120px] object-cover"
                     alt=""
                   />
                 </div>
